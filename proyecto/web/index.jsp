@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login MRB hola</title>
+        <title>Login MRB hola lui</title>
     </head>
     
     <script type="text/javascript" src="JavaScript/jquery-1.8.2.js" ></script>
