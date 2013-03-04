@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login MRB hola lui</title>
+        <title>Login MRB</title>
     </head>
 
     <script type="text/javascript" src="JavaScript/jquery-1.8.2.js" ></script>
@@ -34,7 +34,8 @@
                         AJPassword : password
                     },
                     success: function(response) {
-                        alert("El usuario existe");
+                        //$("#myDiv2").dialog('open');
+                        //alert("El usuario existe");
                     }
                     
                 });
@@ -82,11 +83,12 @@
         String AJPassword = request.getParameter("AJPassword");
 
         boolean state = gestor.login(AJUsername, AJPassword);
-
+     
         if (state) {
             response.sendRedirect("menu.jsp");
         } else {
             out.write("<script>alert('El Usuario y/o Contraseña Ingresados son Inválidos')</script>");
+            System.out.println( "El Usuario y/o Contraseña Ingresados son Inválidos");
         }
 
     %>
@@ -113,7 +115,7 @@
 
                 <br><br>
 
-                <button id="myButtonLogin" class="ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all">Submit</button>
+                <button id="myButtonLogin" class="ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all" type="submit">Submit</button>
 
 
             </center>
