@@ -151,7 +151,7 @@ String variable = "Fill";
         <th class="ui-widget-header">Number <br> Operation</th>
         <th class="ui-widget-header">Lot <br> Number</th>
         <th class="ui-widget-header">Quantity</th>
-        <th class="ui-widget-header">Dollars <br> per Piece</th>
+        <th class="ui-widget-header">Dollars <br> per Piece ($)</th>
         <th class="ui-widget-header">Modelo</th>
         <th class="ui-widget-header">Who <br> Tagged</th>
         <th class="ui-widget-header">Discrepancy <br> Code</th>
@@ -160,7 +160,7 @@ String variable = "Fill";
         <th class="ui-widget-header">Disposition <br> Code</th>
         <th class="ui-widget-header"> Non conforming <br> Parts</th>
         <th class="ui-widget-header"> Qty <br> Scrapped</th>
-        <th class="ui-widget-header"> Dollars <br> Scrapped</th>
+        <th class="ui-widget-header"> Dollars <br> Scrapped ($)</th>
       </tr>
         <tr>       
           <td><input id="TagNumber" type="text"/></td>   
@@ -199,7 +199,7 @@ String variable = "Fill";
         <th class="ui-widget-header">Number <br> Operation</th>
         <th class="ui-widget-header">Lot <br> Number</th>
         <th class="ui-widget-header">Quantity</th>
-        <th class="ui-widget-header">Dollars <br> per Piece</th>
+        <th class="ui-widget-header">Dollars <br> per Piece ($)</th>
         <th class="ui-widget-header">Modelo</th>
         <th class="ui-widget-header">Who <br> Tagged</th>
         <th class="ui-widget-header">Discrepancy <br> Code</th>
@@ -208,7 +208,7 @@ String variable = "Fill";
         <th class="ui-widget-header">Disposition <br> Code</th>
         <th class="ui-widget-header"> Non conforming <br> Parts</th>
         <th class="ui-widget-header"> Qty <br> Scrapped</th>
-        <th class="ui-widget-header"> Dollars <br> Scrapped</th>
+        <th class="ui-widget-header"> Dollars <br> Scrapped ($)</th>
       </tr>
       <tr>
       
