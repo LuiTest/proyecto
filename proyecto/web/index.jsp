@@ -29,16 +29,18 @@
                 //$("#myDiv2").dialog('open');
                 
                 $.ajax({
+                    type: "POST",
                     url: "index.jsp?AJUsername="+username,
                     data: { 
                         AJPassword : password
                     },
-                    success: function(response) {
+                    success: function(response) {                       
                         //$("#myDiv2").dialog('open');
-                        //alert("El usuario existe");
+                        $('#myForm').submit();
                     }
                     
                 });
+                
                 
                 return false;          
             });// button click
@@ -83,13 +85,13 @@
         String AJPassword = request.getParameter("AJPassword");
 
         boolean state = gestor.login(AJUsername, AJPassword);
-     
+      
         if (state) {
-            response.sendRedirect("menu.jsp");
+            out.write("<script>location.href='menu.jsp'</script>");
+            System.out.println( "Usuario existe");
         } else {
             out.write("<script>alert('El Usuario y/o Contraseña Ingresados son Inválidos')</script>");
-            System.out.println( "El Usuario y/o Contraseña Ingresados son Inválidos");
-        }
+        }   
 
     %>
 

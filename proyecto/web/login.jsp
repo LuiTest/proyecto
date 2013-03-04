@@ -1,36 +1,6 @@
 
 <%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
 
-<%
-
-HttpSession sesionLV1 = request.getSession(true);
-
-String activar = "";
-int estado = 0;
-
-activar = (String)sesionLV1.getAttribute("activar");
-
-if(1 == 1){
-estado = 1; //poner alert
-}else{
-estado = 0; //no poner alert
-}
-
-String load = (String) session.getAttribute("load");
-
-if (load == null)
-{
-
-}else{
-    if(load.equals("NO.jsp")){
-    out.write("<script>alert('El Usuario y/o Contraseña Ingresados son Inválidos')</script>");
-    }else{
-    out.write("<script>alert('Debe de encontrarse logeado para poder ingresar a la aplicacion')</script>");
-    }
-}
-
-%>
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

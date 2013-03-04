@@ -119,9 +119,11 @@ String AJDispositionCode = request.getParameter( "AJDispositionCode" );
 String AJNonConformingParts = request.getParameter( "AJNonConformingParts" );
 String AJQtyScrapped = request.getParameter( "AJQtyScrapped" );
 String AJDollarsScrapped = request.getParameter( "AJDollarsScrapped" );
-        
+    
+System.out.println( "Entrando a menu.jsp");
+  
 if(AJTagNumber == null){
-System.out.println( "Es Nulo");
+//System.out.println( "Es Nulo");
 }else{
 resultado = gestor.insertarLinea(AJTagNumber, AJDatePicker, AJShift, AJNumberOperation, AJLotNumber, AJQuantity, AJDollarsPerPiece, AJModelo, AJWhoTagged, AJDiscCode, AJDatePicker2, AJWhoDisposition, AJDispositionCode, AJNonConformingParts, AJQtyScrapped, AJDollarsScrapped);
 System.out.println("Resultado: "+resultado);
