@@ -37,7 +37,12 @@ public class TestServlet extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet TestServlet</title>");
-            out.println("</head>");
+            out.println("</head>");          
+            out.println("<script type=\"text/javascript\" src=\"JavaScript/jquery-1.8.2.js\" >");
+            out.println("</script>");
+            out.println("<script type=\"text/javascript\" src=\"JavaScript/jquery-ui-1.9.1.custom.js\" >");
+            out.println("</script>");      
+            out.println("<link rel='stylesheet' href='Css/jquery-ui-1.9.1.custom.css' type='text/css' />");        
             out.println("<body id=\"imagenLogin\" class=\"index\" style=\"background-repeat: repeat\" >");
             out.println("<form id=\"myForm\" method=\"post\" >");
             out.println("<center>");
@@ -47,7 +52,8 @@ public class TestServlet extends HttpServlet {
             out.println("Usuario <input id=\"userName\" type=\"text\"/>");
             out.println("Password <input id=\"passWord\" type=\"password\"/>");
             out.println("<br><br>");
-            out.println("<button id=\"myButtonLogin\" class=\"ui - button ui - button - text - only ui - widget ui - state -default ui-corner-all\" type=\"submit\">Submit</button>");
+            out.println("<button id=\"myButtonLogin\" class=\"ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all\" type=\"submit\">Submit");
+            out.println("</button>");
             out.println("</center>");
             out.println("</form>");
             out.println("</body>");
