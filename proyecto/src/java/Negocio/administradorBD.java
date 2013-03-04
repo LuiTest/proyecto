@@ -152,10 +152,8 @@ public class administradorBD {
     public boolean login(String p_username, String p_password) throws Exception {
         boolean entrada = false;
         String username = "", password = "";
-        String sqlStatement = "SELECT * FROM USER WHERE USERNAME=? AND PASSWORD=?";
+        String sqlStatement = String.format("SELECT * FROM USER WHERE USERNAME='%s' AND PASSWORD='%s'", p_username,p_password);
         PreparedStatement st = getConnection(false).prepareStatement(sqlStatement);
-        st.setString(1, p_username);
-        st.setString(2, p_password);
         ResultSet rs = getConnection(false).createStatement().executeQuery(sqlStatement);
         while (rs.next()) {
             username = rs.getString("USERNAME");
