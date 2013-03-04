@@ -136,8 +136,6 @@ VALUES (01, 'ENT', 'Relieva Ultirra');
 -- Models
 
 INSERT INTO MODEL (MODEL_ID, DEPARTMENT_ID, MODEL_TITLE, MODEL_DESCRIPTION)
-VALUES ('FAS005148',01,'Ensamble del Relieve Ultirra','Ensamble del Relieve Ultirra, 7x24 mm');
-INSERT INTO MODEL (MODEL_ID, DEPARTMENT_ID, MODEL_TITLE, MODEL_DESCRIPTION)
 VALUES ('FAS005154',01,'Ensamble del Relieve Ultirra','Ensamble del Relieve Ultirra, 6x16 mm');
 INSERT INTO MODEL (MODEL_ID, DEPARTMENT_ID, MODEL_TITLE, MODEL_DESCRIPTION)
 VALUES ('FAS005184',01,'Ensamble del Relieve Ultirra','Ensamble del Relieve Ultirra, 3.5 x 12 mm');

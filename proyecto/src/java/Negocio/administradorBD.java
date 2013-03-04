@@ -158,8 +158,8 @@ public class administradorBD {
         st.setString(2, p_password);
         ResultSet rs = getConnection(false).createStatement().executeQuery(sqlStatement);
         while (rs.next()) {
-            username = rs.getString("nombreUsuario");
-            password = rs.getString("password");
+            username = rs.getString("USERNAME");
+            password = rs.getString("PASSWORD");
         }
         if (username.isEmpty() == false && password.isEmpty() == false) {
             entrada = true;
