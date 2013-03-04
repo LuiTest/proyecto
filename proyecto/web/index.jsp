@@ -84,9 +84,9 @@
         boolean state = gestor.login(AJUsername, AJPassword);
 
         if (state) {
-            System.out.println("Usuario existe");
+            response.sendRedirect("menu.jsp");
         } else {
-            System.out.println("Usuario no existe");
+            out.write("<script>alert('El Usuario y/o Contraseña Ingresados son Inválidos')</script>");
         }
 
     %>
