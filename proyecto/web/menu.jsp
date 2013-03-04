@@ -169,7 +169,7 @@ String variable = "Fill";
           <td><select id="NumberOperation"><%for(int i = 1; i < 19; i++){%><option><%=i%></option><%}%></select></td> 
           <td><input id="LotNumber" type="text"/></td>    
           <td><input id="Quantity" type="text"/></td>    
-          <td><input id="DollarsPerPiece" type="text" value="$"/></td>   
+          <td><input id="DollarsPerPiece" type="text" value=""/></td>   
           <td><select id="Modelo"><%for(int i = 1; i < matrizModelos[0].length; i++){%><option><%=matrizModelos[0][i]%></option><%}%></select></td>   
           <td><input id="WhoTagged" type="text"/></td>   
           <td><input id="DiscCode" type="text"/></td>    
@@ -178,7 +178,7 @@ String variable = "Fill";
           <td><input id="DispositionCode" type="text"/></td>    
           <td><input id="NonConformingParts" type="text"/></td>   
           <td><input id="QtyScrapped" type="text"/></td>   
-          <td><input id="DollarsScrapped" type="text" value="$"/></td>  
+          <td><input id="DollarsScrapped" type="text" value=""/></td>  
          </tr>
     </table>
      
