@@ -4,6 +4,7 @@ Tasks
 Primary
 =======
 Formato de datos con javascript e.g no campos vacios, numericos (isNaN), string.
+Mensajes de error en login
 Styling de login-menu jsp files
 
 Secondary
