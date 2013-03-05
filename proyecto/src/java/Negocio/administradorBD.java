@@ -182,7 +182,7 @@ public class administradorBD {
 
     public String[][] getResultSetData(ResultSet rs) throws Exception {
         String[][] resultSetData = null;
-        if (rs != null && rs.next()) {
+        if (rs != null) {
             ResultSetMetaData rsmd = rs.getMetaData();
             int numColumns = rsmd.getColumnCount();
             String[] columnNames = new String[numColumns];
@@ -200,7 +200,7 @@ public class administradorBD {
             rs.close();
             resultSetData = new String[numColumns][rows.size() + 1];
 
-            for (int i = 0; i < rows.size(); i++) {
+            for (int i = 0; i < rows.size()+1; i++) {
                 String[] row = null;
                 if (i == 0) {
                     row = columnNames;
