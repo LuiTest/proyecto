@@ -1,4 +1,4 @@
-
+<jsp:useBean id="user" class="beans.LoginBean" scope="session"/>
 <%@page import="Negocio.Administrator"%>
 <%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -136,8 +136,11 @@ String variable = "Fill";
         
     
     <body id="imagenLogin" class="index" style="background-repeat: repeat">
-
-
+            
+        
+        <label id="User-FullName"><%= user.getFirstName()%></label>
+        <label id="User-FullLastName"><%= user.getLastName()%></label>
+        
         <form id="myForm" method="get" action="mrb.jsp" onsubmit="">
 
   
