@@ -1,0 +1,11 @@
+Tasks
+=====
+
+Primary
+=======
+Formato de datos con javascript e.g no campos vacios, numericos (isNaN), string.
+Styling de login-menu jsp files
+
+Secondary
+========
+Styling de report jsp file
