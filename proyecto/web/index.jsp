@@ -21,12 +21,12 @@
         $("#myDiv").show(500);    
         $("#myDiv").css("color","Red"); */
         
-            $("#myButtonLogin").click(function(){               
+         /*   $("#myButtonLogin").click(function(){               
             
                 username = $('input#userName').val();
                 password = $('input#passWord').val();
           
-                //$("#myDiv2").dialog('open');
+                $("#myDiv2").dialog('open');
                 
                 $.ajax({
                     type: "POST",
@@ -36,20 +36,21 @@
                     },
                     success: function(response) {                       
                         //$("#myDiv2").dialog('open');
-                        $('#myForm').submit();
+                        document.getElementById("hiddenField").value = 1;
+                        //$('#myForm').submit();
                     }
                     
                 });
                 
-                
+                $('#myForm').submit();
                 return false;          
-            });// button click
+            });// button click*/
         
-            $.ajaxSetup ({  
+         /*   $.ajaxSetup ({  
                 cache: false  
-            });  
+            });  */
       
-            $("#myDiv2").dialog({
+          /*  $("#myDiv2").dialog({
             
                 height: 250,
                 width: 400,
@@ -72,7 +73,7 @@
                 }
         
             }); //dialog
-             
+             */
     
         }); //end
          
@@ -81,17 +82,18 @@
     <%
         Administrator gestor = new Administrator();
 
-        String AJUsername = request.getParameter("AJUsername");
+      /*  String AJUsername = request.getParameter("AJUsername");
         String AJPassword = request.getParameter("AJPassword");
 
         boolean state = gestor.login(AJUsername, AJPassword);
       
         if (state) {
-            out.write("<script>location.href='menu.jsp'</script>");
+            //out.write("<script>location.href='menu.jsp'</script>");
+            out.write("<script>document.getElementById('hiddenField').value = lui;</script>");
             System.out.println( "Usuario existe");
         } else {
             out.write("<script>alert('El Usuario y/o Contraseña Ingresados son Inválidos')</script>");
-        }   
+        }   */
 
     %>
 
@@ -99,7 +101,7 @@
     <body id="imagenLogin" class="index" style="background-repeat: repeat">
 
 
-        <form id="myForm" method="post" >
+        <form id="myForm" method="POST" action="login_controller.jsp" >
 
 
             <center>
@@ -111,14 +113,13 @@
 
                 <br><br><br><br><br><br><br><br>
 
-                Usuario <input id="userName" type="text"/>
+                Usuario <input id="userName" name="userName" type="text"/>
 
-                Password <input id="passWord" type="password"/>
+                Password <input id="passWord" name="passWord" type="password"/>
 
                 <br><br>
 
-                <button id="myButtonLogin" class="ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all" type="submit">Submit</button>
-
+                <button id="myButtonLogin" name="myButtonLogin" class="ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all" type="submit">Submit</button>
 
             </center>
 

@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 
+import Negocio.Administrator;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -37,12 +38,33 @@ public class TestServlet extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet TestServlet</title>");
-            out.println("</head>");          
+            out.println("</head>");
             out.println("<script type=\"text/javascript\" src=\"JavaScript/jquery-1.8.2.js\" >");
             out.println("</script>");
             out.println("<script type=\"text/javascript\" src=\"JavaScript/jquery-ui-1.9.1.custom.js\" >");
-            out.println("</script>");      
-            out.println("<link rel='stylesheet' href='Css/jquery-ui-1.9.1.custom.css' type='text/css' />");        
+            out.println("</script>");
+            out.println("<link rel='stylesheet' href='Css/jquery-ui-1.9.1.custom.css' type='text/css' />");
+            //jquery
+            out.println("<script type='text/javascript'>");
+            out.println("$(document).ready(function(){");
+            out.println("$(\"#myButtonLogin\").click(function(){ ");
+            out.println("username = $('input#userName').val();");
+            out.println("password = $('input#passWord').val();");
+            out.println("$.ajax({");
+            out.println("type: \"POST\",");
+            out.println("url: \"index.jsp?AJUsername=\"+username,");
+            out.println("data: {");
+            out.println("AJPassword : password");
+            out.println("},");
+            out.println("success: function(response) {  ");
+            out.println("alert('Testing');");
+            out.println("}");
+            out.println("});");
+            out.println("return false;");              
+            out.println("});");//button click function
+            out.println("});");
+            out.println("</script>");
+            //jquery          
             out.println("<body id=\"imagenLogin\" class=\"index\" style=\"background-repeat: repeat\" >");
             out.println("<form id=\"myForm\" method=\"post\" >");
             out.println("<center>");
@@ -91,9 +113,21 @@ public class TestServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        System.out.println("does the post");
-        response.sendRedirect("menu.jsp");
+
+        Administrator gestor = new Administrator();
+
+        String AJUsername = request.getParameter("AJUsername");
+        String AJPassword = request.getParameter("AJPassword");
+
+        boolean state = gestor.login(AJUsername, AJPassword);
+      
+        if (state) {
+            response.sendRedirect("menu.jsp");
+            System.out.println("Usuario existe");
+        } else {
+            System.out.println("El Usuario y/o Contraseña Ingresados son Inválidos");
+        }   
+ 
         processRequest(request, response);
     }
 
