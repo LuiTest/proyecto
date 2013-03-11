@@ -15,6 +15,18 @@
                 <h4>Password</h4><input type="password" id="password" name="password" class="ui-corner-all"/><br><br>
                 <input type="submit" class="ui-button ui-button-text-only ui-state-default ui-corner-all" value="Login"> 
             </center>
+            <%
+                String errorMessage = (String) session.getAttribute("errorMessage");
+                if(errorMessage != null){
+                    
+                
+            %>
+            <center>
+                <label id="erroMessageLabel" name="errorMessageLabel" style="color:red;"><%=errorMessage%></label>
+            </center>
+            <%
+                    }
+            %>
         </form>
     </body>
 </html>
