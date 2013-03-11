@@ -13,7 +13,7 @@
                 <h3 class="ui-state-default ui-corner-all">Main Menu</h3><br><br>
                 <h4>Username</h4><input type="text" id="uname" name="uname" class="ui-corner-all"/>
                 <h4>Password</h4><input type="password" id="password" name="password" class="ui-corner-all"/><br><br>
-                <input type="submit" class="ui-button ui-button-text-only ui-state-default ui-corner-all" value="Login">    
+                <input type="submit" class="ui-button ui-button-text-only ui-state-default ui-corner-all" value="Login"> 
             </center>
         </form>
     </body>
