@@ -35,9 +35,10 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = request.getSession(true);
             String uname = request.getParameter("uname");
             String password = request.getParameter("password");
-            if (uname.isEmpty() && password.isEmpty()) {
+            if (uname.isEmpty() || password.isEmpty()) {
                 message = "User name and/or password cannot be empty.";
                 session.setAttribute("errorMessage", message);
+                response.sendRedirect("LoginPage.jsp");
             } else {
                 user.setUserName(uname);
                 user.setPassword(password);

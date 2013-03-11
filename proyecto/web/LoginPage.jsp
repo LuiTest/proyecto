@@ -3,23 +3,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
         <title>Login Page</title> </head>
-    <script type="text/javascript" src="JavaScript/validations.js" ></script>
     <script type="text/javascript" src="JavaScript/jquery-1.8.2.js" ></script>
     <script type="text/javascript" src="JavaScript/jquery-ui-1.9.1.custom.js" ></script> 
     <link rel="stylesheet" type="text/css" href="Css/jquery-ui-1.9.1.custom.css" />
     <body id="imagenLogin" class="index" style="background-repeat: repeat">
-        <form name="actionForm" action="LoginServlet" method ="GET" onsubmit="login()">      
+        <form name="actionForm" action="LoginServlet" method ="GET">      
             <center>
                 <h3 class="ui-state-default ui-corner-all">Main Menu</h3><br><br>
                 <h4>Username</h4><input type="text" id="uname" name="uname" class="ui-corner-all"/>
                 <h4>Password</h4><input type="password" id="password" name="password" class="ui-corner-all"/><br><br>
                 <input type="submit" class="ui-button ui-button-text-only ui-state-default ui-corner-all" value="Login"> 
             </center>
+            <br>
             <%
                 String errorMessage = (String) session.getAttribute("errorMessage");
-                if(errorMessage != null){
-                    
-                
+                if(errorMessage != null){                
             %>
             <center>
                 <label id="erroMessageLabel" name="errorMessageLabel" style="color:red;"><%=errorMessage%></label>
